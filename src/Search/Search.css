@@ -1,0 +1,30 @@
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+  color: #3d3d3d; /* Цвет иконки, по вашему выбору */
+  cursor: pointer;
+}
+
+#inp_search {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  color: transparent;
+  transition: 0.8s;
+}
+
+#inp_search:hover {
+  width: 150px;
+  height: 30px;
+  color: #3d3d3d;
+  border-radius: 5px;
+  transition: 0.8s;
+}

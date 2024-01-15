@@ -1,0 +1,15 @@
+.ivg_icon1 {
+    display: flex;
+justify-content: center;
+}
+
+.content0 {
+    max-width: 1150px;
+    margin: 0 auto;
+    /* margin-top: 13%; */
+}
+
+
+#imgicon1 {
+    width: 350px;
+} 

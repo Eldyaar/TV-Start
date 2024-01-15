@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../Fonts/Roboto-Black.ttf);
+    src: url(../Fonts/Roboto-Light.ttf);
+} 
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+ 
+/* * {
+    font-family: Roboto;
+} */
+.content {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.container {
+    background-image: url(./tv-start-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 430px;
+    margin: 0 auto;
+    padding: 0;
+    
+}
+
+
+.nav_bar {
+    display: flex;
+    padding-top: 50px;
+    gap: 60px;
+}
+.nav_link {
+ display: flex;
+ justify-content: center;
+ width: 70%;
+ gap: 20px;
+ margin-top: 10px;
+ 
+
+}
+.logo {
+   width: 140px; 
+}
+
+
+#links {
+    color: white;
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: 400;
+
+}
+a {
+    text-decoration: none;
+}
+#links:hover {
+    color: rgb(107, 107, 107);
+
+}
+
+
+select {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+.nav_icon  {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+   
+}
+
+  .icon {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+     width: 100%;
+  }
+
+
+
+.img_icon {
+    width: 35px;
+    height: 35px;
+   
+}
+
+
+.search_bl {
+    /* width: 35px;
+    height: 35px;
+    background-color: white;
+     border-radius: 50%; */
+     margin-right: 30px;
+}
+
+
+.tele_true {
+    display: flex;
+   
+}
+#tele_img  {
+    margin-top: 18px;
+    width: 70px;
+    height: 70px;
+}
+
+.tele_text {
+    position: relative;
+    display: grid;
+    align-items: start;
+    color: white;
+    font-family: Roboto;
+}
+
+
+#h3 {
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    height: 10px;
+    /* font-weight: 00; */
+    margin-left: 20px;
+}
+
+
+#h1 {
+    position: absolute;
+    top: 10px;
+    height: 20px;
+    /* font-weight: 400; */
+    width: 408px;
+    font-size: 32px;
+    margin-left: 20px;
+}
+
+
+#p1 {
+    position: absolute;
+    top: 80px;
+    width: 800px;
+    margin-left: 25px;
+}

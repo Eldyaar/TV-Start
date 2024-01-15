@@ -1,0 +1,45 @@
+* {
+    font-family: Roboto;
+}
+
+.content {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+.title {
+    display: block;
+    margin-left: 122px;
+} 
+
+
+.img_cart {
+    display: flex;
+    justify-content: center;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin-left: 125px;
+    margin-top: 20px;
+}
+
+
+.infom {
+    display: flex;
+    justify-content: center;
+    gap: 240px;
+    font-family: Roboto;
+    font-weight: 400;
+} 
+
+
+.infor {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin-left: 124px;
+}
