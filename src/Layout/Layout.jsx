@@ -8,13 +8,12 @@ import IconBfb from '../IconBfb/IconBfb';
 const Layout = () => {
   return (
     <div>
-         <Nav/>
-         <Outlet/>
-        <IconBfb/>
-         <Footer/>
+      <Nav/>
+      <Outlet/>
+      <IconBfb/>
+      <Footer/>
     </div>
   )
 }
-
 
 export default Layout;
