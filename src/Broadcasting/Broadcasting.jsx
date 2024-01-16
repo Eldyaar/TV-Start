@@ -97,7 +97,7 @@ const Broadcasting = () => {
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
+                            <td>&nbsp; </td>
                         </tr>
                         </tbody>
                     </table>
@@ -108,3 +108,4 @@ const Broadcasting = () => {
 };
 
 export default Broadcasting;
+
