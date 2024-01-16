@@ -1,0 +1,18 @@
+.table.tbl td {
+    padding: 0.4rem;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+table.tbl tbody tr:nth-child(odd) {
+    background: #eee;
+}
+
+.tbl {
+    border: 1px solid #ccc;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
