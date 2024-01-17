@@ -5,7 +5,7 @@ import Ava from './pleer.jpg';
 import './Calendar.css';
 
 const Calendar = () => {
-  const [matchesData, setMatchesData] = useState([]);
+  const [matchesData,  setMatchesData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedSport, setSelectedSport] = useState('');
   const [selectedCompetition, setSelectedCompetition] = useState('');
