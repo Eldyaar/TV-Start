@@ -75,9 +75,15 @@ a {
 
 .food {
     display: flex;
-    justify-content: center;
-    gap: 710px;
-    font-family: Rubik;
+    gap: 799px;
+    font-family: Rubik, sans-serif;
     font-size: 13px;
     color: rgb(146, 146, 146);
+    margin-top: 30px;
+}
+
+.email {
+    color: #666666;
+    margin-right: 10px;
+    white-space: nowrap;
 }

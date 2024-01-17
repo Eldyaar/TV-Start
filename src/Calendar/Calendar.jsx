@@ -62,7 +62,6 @@ const Calendar = () => {
   const handleCompetitionChange = (event) => {
     const selectedCompetition = event.target.value;
     setSelectedCompetition(selectedCompetition);
-    setSelectedCompetition('');
   };
 
   const handleSelectedYear = (event) => {

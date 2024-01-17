@@ -20,11 +20,11 @@ td {
 
 .wrap {
     display: flex;
-    width: 110px;
-    height: 157.912px;
+    width: 89px;
+    height: 159px;
     font-weight: 500;
     border: 1px solid #ccc;
-    padding: 0.8rem;
+    padding: 8px;
     background-color: #f1f1f1;
 }
 
@@ -34,13 +34,22 @@ td {
 }
 
 .inner {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
+}
+
+.wrap-colum {
+
+}
+
+.wrapper {
 }
 
 .wrappper {
-    width: 150px;
-    height: 183.912px;
+    width: 130px;
+    height: 159px;
+    padding: 8px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -48,13 +57,45 @@ td {
     background: #ccc;
 }
 
+.last-three {
+    width: 220px;
+    height: 280px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #aaa;
+    background: #ccc;
+}
+
+.information {
+}
+
+.smart-tv-data {
+    width: 825px;
+}
+
+.smart-inform {
+    display: flex;
+    margin: 130px 0 130px 8px;
+    flex-wrap: wrap;
+}
+
+.wrap-content {
+    width: 127px;
+    height: 140px;
+    padding: 3.5px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
 .text {
     font-weight: 500;
 }
 
 .tv {
     font-weight: 500;
-    padding-left: 30px;
+    letter-spacing: 1px;
 }
 
 .images {
@@ -86,14 +127,13 @@ td {
 }
 
 .smart {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
 }
 
 .inform {
     display: flex;
-    margin-right: 100px;
+    margin: 0 80px;
 }
 
 .block {
@@ -130,4 +170,60 @@ td {
     background-color: #fff;
     border: 1px solid #ccc;
 }
+
+.content-page {
+
+}
+
+.margin-info {
+    display: flex;
+    align-items: center;
+}
+
+.margin-flex {
+    width: 214px;
+    height: 150px;
+    text-align: center;
+    background: #ccc;
+    border: 1px solid #aaa;
+    padding: 0.8rem;
+}
+
+.youtube {
+    display: block;
+    width: 75px;
+    height: 17px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.margin-footer {
+    width: 177px;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid #ccc;
+    background-color: #e7e7e7;
+}
+
+.text-page {
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 65.5px;
+}
+
+.iframe {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.spannn {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
 
