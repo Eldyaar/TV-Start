@@ -35,22 +35,22 @@ const Broadcasting = () => {
                 </div>
             ) : (
                 <>
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                        </tr>
-                        </tbody>
-                    </table>
 
                     <div className="wrapper">
                         <div className="wrappper">
                             <p className="text">Общероссийские операторы</p>
                         </div>
                         <div className="first-data">
+                            {lastThreeData.map((item, index) => (
+                                <div className="wrap" key={index}>
+                                    <div className="inner">
+                                        <img src={item.image} alt={item.name_ru} className="images"/>
+                                        <a href={item.url} target="_blank" className="link">
+                                            {item.name_ru}
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
                             {firstData.map((item, index) => (
                                 <div className="wrap" key={index}>
                                     <div className="inner">
@@ -64,43 +64,14 @@ const Broadcasting = () => {
                         </div>
                     </div>
 
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                        </tr>
-                        </tbody>
-                    </table>
-
                     <div className="wrapper last-three">
                         <div className="wrappper">
                             <p className="tv">СМАРТ ТВ</p>
                         </div>
-                        {lastThreeData.map((item, index) => (
-                            <div className="wrap" key={index}>
-                                <div className="inner">
-                                    <img src={item.image} alt={item.name_ru} className="images"/>
-                                    <a href={item.url} target="_blank" className="link">
-                                        {item.name_ru}
-                                    </a>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
 
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp; </td>
-                        </tr>
-                        </tbody>
-                    </table>
+
+
+                    </div>
                 </>
             )}
         </div>

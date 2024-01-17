@@ -15,6 +15,7 @@ td {
 .wrapper {
     display: flex;
     align-items: center;
+    margin: 70px 0;
 }
 
 .wrap {

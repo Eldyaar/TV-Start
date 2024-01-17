@@ -13,7 +13,7 @@ const Contact = () => {
               <div className='img_cart'>
               <img src={star} alt="" />
               </div>
-             {/* <div className='map'> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab8ac139c220fcdb4b093662e20f6de413c5665f566e07731a6a4f85d185c9984&amp;source=constructor" width="900" height="500" frameborder="0"></iframe></div> */}
+              <div className='map'> <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab8ac139c220fcdb4b093662e20f6de413c5665f566e07731a6a4f85d185c9984&amp;source=constructor" width="900" height="500" frameborder="0"></iframe></div>
              <div className="infom">
                   <h3>Телефоны: <br /> <span>+7 499 700 02 02 </span></h3>
                   <h3>Сайт: <br /> <span>TVSTART.RU </span></h3>

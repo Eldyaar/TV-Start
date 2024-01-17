@@ -14,7 +14,7 @@ const Footer = () => {
               <div className="nav_bar">
               <div className="logo_block">
               <Link to={'/'}>
-               <img src={log} alt="" className='logo' />
+               <img src={log} alt="" className='logo-main' />
               </Link>
               </div>
               <div className="nav_link">

@@ -22,7 +22,7 @@ const Nav = () => {
                     <div className="nav_bar">
                         <div className="logo_block">
                             <Link to={'/'}>
-                                <img src={logo} alt="" className='logo' />
+                                <img src={logo} alt="" className='logo-main' />
                             </Link>
                         </div>
                         <div className="nav_link">
