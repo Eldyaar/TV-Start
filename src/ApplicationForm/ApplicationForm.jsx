@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import './form.css'
 import { data } from 'browserslist'
@@ -6,6 +6,15 @@ import { data } from 'browserslist'
 
 const Form = () => {
    const { register, handleSubmit } = useForm({})
+
+   const [formData, setFormData] = useState({
+      activities: '',
+      contact: '',
+      telephone: '',
+      gmail: ''
+   })
+
+   
 
    const submit = data => {
       console.log(data)
