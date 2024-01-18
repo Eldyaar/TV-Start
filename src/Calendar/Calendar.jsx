@@ -157,9 +157,9 @@ const Calendar = () => {
                           <p className="name_ru">{match.tournament_match.name_ru}</p>
                         </div>
                         <div className="button">
-                          <a href="https://tvstart.ru/ru/streams/futbol-kubok-azii-afk-tajland-kyrgyzstan/"
+                          <a href={match.url}
                              target="_blank">
-                            <img src={Ava} width="30" height="30"/>
+                            <img src={Ava} width="30" height="30" />
                           </a>
                         </div>
                       </div>

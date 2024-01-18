@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Programm.css';
+import IconBfb from "../IconBfb/IconBfb";
 
 const Programm = () => {
     const [sportTypes, setSportTypes] = useState([]);

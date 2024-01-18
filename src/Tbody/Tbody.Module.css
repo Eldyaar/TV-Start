@@ -1,0 +1,21 @@
+.position {
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    top: -160px;
+    left: 0;
+    z-index: -1;
+    background-image: url(tv-start-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 445px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wrapper-content {
+    margin-top: 170px;
+}

@@ -12,26 +12,22 @@ import Cable from "./Cable/Cable"
 import Contact from "./Contact/Contact"
 
 function App() {
-  return (
-    <div className="App">
-       
-        
-           <Routes>
-            <Route path={''} element={<Layout/>}>
-                <Route path={'/'} element={<Tbody/>}/>
-                <Route path={'/programm'} element={<Programm/>}/>
-                <Route path={'/broadcast'} element={<Broadcast/>}/>
-                <Route path={'/calendar'} element={<Calendar/>}/>
-                <Route path={'/service'} element={<Service/>}/>
-                <Route path={'/broadcasting'} element={<Broadcasting/>}/>
-                <Route path={'/cable'} element={<Cable/>}/>
-                <Route path={'/contact'} element={<Contact/>}/>
-            </Route>
-          </Routes> 
-             
-        
-    </div>
-  );
+    return (
+        <div className="App">
+            <Routes>
+                <Route path={''} element={<Layout/>}>
+                    <Route path={'/'} element={<Tbody/>}/>
+                    <Route path={'/programm'} element={<Programm/>}/>
+                    <Route path={'/broadcast'} element={<Broadcast/>}/>
+                    <Route path={'/calendar'} element={<Calendar/>}/>
+                    <Route path={'/service'} element={<Service/>}/>
+                    <Route path={'/broadcasting'} element={<Broadcasting/>}/>
+                    <Route path={'/cable'} element={<Cable/>}/>
+                    <Route path={'/contact'} element={<Contact/>}/>
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

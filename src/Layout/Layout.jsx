@@ -11,7 +11,6 @@ const Layout = () => {
     <div>
       <Nav/>
       <Outlet/>
-      <IconBfb/>
       <Form />
       <Footer/>
     </div>
