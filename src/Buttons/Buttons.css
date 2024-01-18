@@ -8,6 +8,19 @@
     height: 50px;
 }
 
+.color {
+    position: relative;
+}
+
+.iamges-bg {
+    height: auto;
+    position: absolute;
+    top: -150px;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+}
+
 .tele_text {
     position: relative;
     display: grid;
@@ -22,7 +35,7 @@
     top: 10px;
     width: 200px;
     height: 10px;
-    margin-top: 13px;
+    margin-top: 5px;
     margin-left: 20px;
 }
 
@@ -33,19 +46,20 @@
     height: 20px;
     font-size: 2em;
     line-height: 1em;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 408px;
     margin-left: 20px;
 }
 
 
 #p1 {
-    position: absolute;
-    top: 80px;
-    width: 800px;
+    width: 820px;
     margin-left: 25px;
     margin-top: 20px;
-    color: #969696;
+    color: #f7f7f7;
+    line-height: 1.5em;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 1px #000000, 0 0 0.5em #000000;
 }
 
 .tele-lain {

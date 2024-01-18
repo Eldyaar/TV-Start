@@ -60,6 +60,7 @@ select {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    padding-bottom: 10px;
 }
 
 .icon {
@@ -123,4 +124,8 @@ select {
     top: 80px;
     width: 800px;
     margin-left: 25px;
+}
+
+.fff {
+    color: #fff;
 }
