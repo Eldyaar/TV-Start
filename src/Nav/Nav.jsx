@@ -108,22 +108,16 @@ const Nav = () => {
                                 </div>
                                 <div className="nav_link">
                                     <Link to={'/programm'} id="links">
-                                        Programs
+                                        Schedule
                                     </Link>
                                     <Link to={'/broadcast'} id="links">
-                                        Live Broadcasts
+                                        Live Events
                                     </Link>
                                     <Link to='/calendar' id="links">
                                         Calendar
                                     </Link>
                                     <Link to='/service' id="links">
                                         Services
-                                    </Link>
-                                    <Link to='/broadcasting' id="links">
-                                        Broadcasting
-                                    </Link>
-                                    <Link to='/cable' id="links">
-                                        Cable Operators
                                     </Link>
                                     <Link to='/contact' id="links">
                                         Contacts

@@ -71,25 +71,19 @@ const Footer = () => {
                             </div>
                             <div className="nav_link">
                                 <Link to={'/programm'} id="linkss">
-                                    Program
+                                    SCHEDULE
                                 </Link>
                                 <Link to={'/broadcast'} id="linkss">
-                                    Live Broadcasts
+                                    LIVE
                                 </Link>
                                 <Link to='/calendar' id="linkss">
-                                    Calendar
+                                    CALENDAR
                                 </Link>
                                 <Link to='/service' id="linkss">
-                                    Services
-                                </Link>
-                                <Link to='/broadcasting' id="linkss">
-                                    Broadcasting
-                                </Link>
-                                <Link to='/cable' id="linkss">
-                                    Cable Operators
+                                    SERVICES
                                 </Link>
                                 <Link to='/contact' id="linkss">
-                                    Contacts
+                                    CONTACTS
                                 </Link>
                             </div>
                             <div className="info">
@@ -100,7 +94,7 @@ const Footer = () => {
                     </div>
                     <div className="line"></div>
                     <div className="footer">
-                        <p>© TeleRadioCompany "START" 2024</p>
+                        <p>© Channel START 2024</p>
                         <p>All rights reserved</p>
                     </div>
                 </div>

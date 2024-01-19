@@ -121,13 +121,8 @@ const Service = () => {
             {selectedLanguage === 'EN' &&
                 <div className="block__block-post">
                     <h2>Services</h2>
-                    <p>Our company has its own technical base and is ready to provide a full range of television
-                        production services. We can offer any broadcasting services, from equipment rental to organizing
-                        complete television production and live streaming of any event with a fully equipped creative
-                        team.</p>
-                    <p>Our main office is located in Moscow. However, we provide our services in any region of Russia,
-                        Belarus, and Kazakhstan. Using flypack equipment, our company can produce events on different
-                        continents and in distant countries.</p>
+                    <p className="service-text">Having own technical base our company is ready to provide a full range of production services. We can offer any broadcasting facilities from equipment rent to organizing of a full TV production and live transmission of any event with a full creative staff.</p>
+                    <p className="service-text">Our main office is in Moscow. Nevertheless we provide our services in any region of Russia, Belarus, Kazakhstan. Having a production experience of the European Shooting Championship in Slovenia we are ready to provide our services in Europe. Using fly pack equipment our company will be able to produce any event on a different continents and far away countries.</p>
                     <p><img src="http://tvstart.ru/app/uploads/2017/03/services01-1.jpg" alt="" width="100%"/></p>
                     <p>&nbsp;</p>
                     <h4>TVSTART provides the following technical services:</h4>
@@ -212,7 +207,7 @@ const Service = () => {
                     <br/><br/>
                     <div className="row">
                         <div className="col-md-6">
-                            <p><strong>Studio</strong></p>
+                            <p><strong>Studio facilities</strong></p>
                             <ul>
                                 <li>2-6 cameras;</li>
                                 <li>chroma key or city view.</li>

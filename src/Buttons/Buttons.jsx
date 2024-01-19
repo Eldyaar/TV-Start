@@ -9,6 +9,15 @@ const Buttons = () => {
     return (
         <>
 
+            <amp-ad width="100vw" height="320"
+                    type="adsense"
+                    data-ad-client="ca-pub-8334463459257892"
+                    data-ad-slot="2588410361"
+                    data-auto-format="rspv"
+                    data-full-width="">
+                <div overflow=""></div>
+            </amp-ad>
+
             {selectedLanguage === "RU" &&
                 <div className="color">
                     <img className="iamges-bg" src="http://tvstart.ru//app/uploads/system/bg-top-23_2.jpg"/>

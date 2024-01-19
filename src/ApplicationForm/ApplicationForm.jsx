@@ -79,7 +79,7 @@ const Form = () => {
                           <input {...register('contact')} placeholder='Contact Person' type='text'/>
                           <input {...register('telephone')} placeholder='Phone' type='tel'/>
                           <input {...register('gmail')} placeholder='E-mail' type='text'/>
-                          <button className='application-form-content__form-btn'>Submit Application</button>
+                          <button className='application-form-content__form-btn'>Send</button>
                        </form>
                     </div>
                  </div>
