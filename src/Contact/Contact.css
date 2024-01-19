@@ -2,6 +2,15 @@
     font-family: Roboto, sans-serif;
 }
 
+h1 {
+    font-weight: 500;
+}
+
+.lain-text {
+    font-weight: 400;
+    font-size: 20px;
+}
+
 .content {
     max-width: 1150px;
     margin: 0 auto;
@@ -10,7 +19,12 @@
 
 .title {
     display: block;
-} 
+}
+
+.inline-title {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
 
 
 .img_cart {
@@ -23,15 +37,43 @@
     margin-top: 20px;
 }
 
-
 .infom {
     display: flex;
     gap: 240px;
     font-weight: 400;
-} 
+}
 
+.contacts-text {
+    line-height: 30px;
+    font-weight: 400;
+}
 
 .infor {
     display: flex;
     width: 900px;
+}
+
+.row-ooo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.playse {
+    font-size: 30px;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+.ops {
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit;
 }

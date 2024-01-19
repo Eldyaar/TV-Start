@@ -1,13 +1,18 @@
+.content-information {
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    background-color: #F1F1F1!important;
+}
+
 .ivg_icon1 {
     display: flex;
-justify-content: center;
+    justify-content: center;
 }
 
 .content0 {
     max-width: 1150px;
     margin: 0 auto;
-    margin-top: 40px;
-    /* margin-top: 13%; */
+    padding: 70px 0;
 }
 
 

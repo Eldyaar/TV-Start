@@ -10,7 +10,6 @@ const Layout = ({ getInputValue }) => {
     <div>
       <Nav getInputValue={getInputValue} />
       <Outlet/>
-      <IconBfb/>
       <Form />
       <Footer/>
     </div>

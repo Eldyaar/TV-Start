@@ -3,6 +3,8 @@ import { ScaleLoader } from 'react-spinners';
 import axios from 'axios';
 import Ava from './pleer.jpg';
 import './Calendar.css';
+import {useLanguage} from "../LanguageContext/LanguageContext";
+import star from "../Contact/build.png";
 
 const Calendar = () => {
   const [matchesData,  setMatchesData] = useState([]);
@@ -74,100 +76,210 @@ const Calendar = () => {
     setSelectedMonth(selectedMonth);
   };
 
+  const { selectedLanguage } = useLanguage();
+
   return (
       <>
-        <div className="div-content">
-          <div className="spaces">
-            <select name="" id="" className="select" onChange={handleSportChange}>
-              <option value="" className="option">Все виды спорта</option>
-              <option value="Футбол" className="option">Футбол</option>
-              <option value="Баскетбол" className="option">Баскетбол</option>
-            </select>
+        {selectedLanguage === "RU" &&
+            <div>
+              <div className="div-content">
+                <div className="spaces">
+                  <select name="" id="" className="select" onChange={handleSportChange}>
+                    <option value="" className="option">Все виды спорта</option>
+                    <option value="Футбол" className="option">Футбол</option>
+                    <option value="Баскетбол" className="option">Баскетбол</option>
+                  </select>
 
-            <select name="" id="" className="select" onChange={handleCompetitionChange}>
-              <option value="" className="option">Все соревнования</option>
-              <option value="Футбол. Кубок Азии" className="option">Футбол. Кубок Азии</option>
-              <option value="Футбол. Чемпионат Португалии." className="option">Футбол. Чемпионат Португалии.</option>
-              <option value="Футбол. Кубок Франции" className="option">Футбол. Кубок Франции</option>
-              <option value="Баскетбол. Лига Чемпионов" className="option">Баскетбол. Лига Чемпионов</option>
-              <option value="Баскетбол. Чемпионат Испании." className="option">Баскетбол. Чемпионат Испании.</option>
-              <option value="Баскетбол. Чемпионат Испании." className="option">Баскетбол. Чемпионат Испании.</option>
-            </select>
+                  <select name="" id="" className="select" onChange={handleCompetitionChange}>
+                    <option value="" className="option">Все соревнования</option>
+                    <option value="Футбол. Кубок Азии" className="option">Футбол. Кубок Азии</option>
+                    <option value="Футбол. Чемпионат Португалии." className="option">Футбол. Чемпионат Португалии.
+                    </option>
+                    <option value="Футбол. Кубок Франции" className="option">Футбол. Кубок Франции</option>
+                    <option value="Баскетбол. Лига Чемпионов" className="option">Баскетбол. Лига Чемпионов</option>
+                    <option value="Баскетбол. Чемпионат Испании." className="option">Баскетбол. Чемпионат Испании.
+                    </option>
+                    <option value="Баскетбол. Чемпионат Испании." className="option">Баскетбол. Чемпионат Испании.
+                    </option>
+                  </select>
 
-            <select name="" id="" className="select" onChange={handleSelectedYear}>
-              <option value="" className="option">Все годы</option>
-              <option value="2016" className="option">2016</option>
-              <option value="2017" className="option">2017</option>
-              <option value="2018" className="option">2018</option>
-              <option value="2019" className="option">2019</option>
-              <option value="2020" className="option">2020</option>
-              <option value="2021" className="option">2021</option>
-              <option value="2022" className="option">2022</option>
-              <option value="2023" className="option">2023</option>
-              <option value="" className="option">2024</option>
-            </select>
+                  <select name="" id="" className="select" onChange={handleSelectedYear}>
+                    <option value="" className="option">Все годы</option>
+                    <option value="2016" className="option">2016</option>
+                    <option value="2017" className="option">2017</option>
+                    <option value="2018" className="option">2018</option>
+                    <option value="2019" className="option">2019</option>
+                    <option value="2020" className="option">2020</option>
+                    <option value="2021" className="option">2021</option>
+                    <option value="2022" className="option">2022</option>
+                    <option value="2023" className="option">2023</option>
+                    <option value="" className="option">2024</option>
+                  </select>
 
-            <select name="" id="" className="select" onChange={handleSelectedMonth}>
-              <option value="" className="option">Все месяцы</option>
-              <option value="1" className="option">Январь</option>
-              <option value="2" className="option">Февраль</option>
-              <option value="3" className="option">Март</option>
-              <option value="4" className="option">Апрель</option>
-              <option value="5" className="option">Май</option>
-              <option value="6" className="option">Июнь</option>
-              <option value="7" className="option">Июль</option>
-              <option value="8" className="option">Август</option>
-              <option value="9" className="option">Сентябрь</option>
-              <option value="10" className="option">Октябрь</option>
-              <option value="11" className="option">Ноябрь</option>
-              <option value="12" className="option">Декабрь</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="content">
-          <h3>Календарь</h3>
-          <div className="content-flex">
-            {loading ? (
-                <div className="loader">
-                  <ScaleLoader color="#36d7b7"/>
+                  <select name="" id="" className="select" onChange={handleSelectedMonth}>
+                    <option value="" className="option">Все месяцы</option>
+                    <option value="1" className="option">Январь</option>
+                    <option value="2" className="option">Февраль</option>
+                    <option value="3" className="option">Март</option>
+                    <option value="4" className="option">Апрель</option>
+                    <option value="5" className="option">Май</option>
+                    <option value="6" className="option">Июнь</option>
+                    <option value="7" className="option">Июль</option>
+                    <option value="8" className="option">Август</option>
+                    <option value="9" className="option">Сентябрь</option>
+                    <option value="10" className="option">Октябрь</option>
+                    <option value="11" className="option">Ноябрь</option>
+                    <option value="12" className="option">Декабрь</option>
+                  </select>
                 </div>
-            ) : (
-                filterMatches().map((match) => (
-                    <div key={match.id} className="ava">
-                      <div className="body">
-                        <div className="logo-flex">
-                          <div className="div">
-                            <img className="game" src={match.sport_type.image} alt={match.sport_type.name_ru}/>
-                          </div>
-                          <p>{match.date_of_match ? `${match.date_of_match} MSK` : '2024-01-15 10:32:17 MSK'}</p>
-                        </div>
-                        <div>
-                          <div className="logo-flex">
-                            <div className="row-flex">
-                              <p className="name">{match.team_first.name_ru}</p>
-                              <img className="logo" src={match.team_first.image} alt={match.team_first.name_ru}/>
-                            </div>
-                            <p className="margin">- -</p>
-                            <div className="row-flex">
-                              <img className="logo" src={match.team_second.image} alt={match.team_second.name_ru}/>
-                              <p className="name">{match.team_second.name_ru}</p>
-                            </div>
-                          </div>
-                          <p className="name_ru">{match.tournament_match.name_ru}</p>
-                        </div>
-                        <div className="button">
-                          <a href="https://tvstart.ru/ru/streams/futbol-kubok-azii-afk-tajland-kyrgyzstan/"
-                             target="_blank">
-                            <img src={Ava} width="30" height="30"/>
-                          </a>
-                        </div>
+              </div>
+
+              <div className="content">
+                <h3>Календарь</h3>
+                <div className="content-flex">
+                  {loading ? (
+                      <div className="loader">
+                        <ScaleLoader color="#36d7b7"/>
                       </div>
-                    </div>
-                ))
-            )}
-          </div>
-        </div>
+                  ) : (
+                      filterMatches().map((match) => (
+                          <div key={match.id} className="ava">
+                            <div className="body">
+                              <div className="logo-flex">
+                                <div className="div">
+                                  <img className="game" src={match.sport_type.image} alt={match.sport_type.name_ru}/>
+                                </div>
+                                <p>{match.date_of_match ? `${match.date_of_match} MSK` : '2024-01-15 10:32:17 MSK'}</p>
+                              </div>
+                              <div>
+                                <div className="logo-flex">
+                                  <div className="row-flex">
+                                    <p className="name">{match.team_first.name_ru}</p>
+                                    <img className="logo" src={match.team_first.image} alt={match.team_first.name_ru}/>
+                                  </div>
+                                  <p className="margin">- -</p>
+                                  <div className="row-flex">
+                                    <img className="logo" src={match.team_second.image}
+                                         alt={match.team_second.name_ru}/>
+                                    <p className="name">{match.team_second.name_ru}</p>
+                                  </div>
+                                </div>
+                                <p className="name_ru">{match.tournament_match.name_ru}</p>
+                              </div>
+                              <div className="button">
+                                <a href={match.url}
+                                   target="_blank">
+                                  <img src={Ava} width="30" height="30"/>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                      ))
+                  )}
+                </div>
+              </div>
+            </div>
+        }
+
+        {selectedLanguage === "EN" &&
+            <div>
+              <div className="div-content">
+                <div className="spaces">
+                  <select name="" id="" className="select" onChange={handleSportChange}>
+                    <option value="" className="option">All sports</option>
+                    <option value="Football" className="option">Football</option>
+                    <option value="Basketball" className="option">Basketball</option>
+                  </select>
+
+                  <select name="" id="" className="select" onChange={handleCompetitionChange}>
+                    <option value="" className="option">All competitions</option>
+                    <option value="Football. Asia Cup" className="option">Football. Asia Cup</option>
+                    <option value="Football. Portugal Championship" className="option">Football. Portugal Championship
+                    </option>
+                    <option value="Football. French Cup" className="option">Football. French Cup</option>
+                    <option value="Basketball. Champions League" className="option">Basketball. Champions League
+                    </option>
+                    <option value="Basketball. Spain Championship" className="option">Basketball. Spain Championship
+                    </option>
+                    <option value="Basketball. Spain Championship" className="option">Basketball. Spain Championship
+                    </option>
+                  </select>
+
+                  <select name="" id="" className="select" onChange={handleSelectedYear}>
+                    <option value="" className="option">All years</option>
+                    <option value="2016" className="option">2016</option>
+                    <option value="2017" className="option">2017</option>
+                    <option value="2018" className="option">2018</option>
+                    <option value="2019" className="option">2019</option>
+                    <option value="2020" className="option">2020</option>
+                    <option value="2021" className="option">2021</option>
+                    <option value="2022" className="option">2022</option>
+                    <option value="2023" className="option">2023</option>
+                    <option value="" className="option">2024</option>
+                  </select>
+
+                  <select name="" id="" className="select" onChange={handleSelectedMonth}>
+                    <option value="" className="option">All months</option>
+                    <option value="1" className="option">January</option>
+                    <option value="2" className="option">February</option>
+                    <option value="3" className="option">March</option>
+                    <option value="4" className="option">April</option>
+                    <option value="5" className="option">May</option>
+                    <option value="6" className="option">June</option>
+                    <option value="7" className="option">July</option>
+                    <option value="8" className="option">August</option>
+                    <option value="9" className="option">September</option>
+                    <option value="10" className="option">October</option>
+                    <option value="11" className="option">November</option>
+                    <option value="12" className="option">December</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="content">
+                <h3>Calendar</h3>
+                <div className="content-flex">
+                  {loading ? (
+                      <div className="loader">
+                        <ScaleLoader color="#36d7b7"/>
+                      </div>
+                  ) : (
+                      filterMatches().map((match) => (
+                          <div key={match.id} className="ava">
+                            <div className="body">
+                              <div className="logo-flex">
+                                <div className="div">
+                                  <img className="game" src={match.sport_type.image} alt={match.sport_type.name_en}/>
+                                </div>
+                                <p>{match.date_of_match ? `${match.date_of_match} MSK` : '2024-01-15 10:32:17 MSK'}</p>
+                              </div>
+                              <div>
+                                <div className="logo-flex">
+                                  <div className="row-flex">
+                                    <p className="name">{match.team_first.name_en}</p>
+                                    <img className="logo" src={match.team_first.image} alt={match.team_first.name_en}/>
+                                  </div>
+                                  <p className="margin">- -</p>
+                                  <div className="row-flex">
+                                    <img className="logo" src={match.team_second.image}
+                                         alt={match.team_second.name_en}/>
+                                    <p className="name">{match.team_second.name_en}</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="button">
+                                <a href={match.url} target="_blank">
+                                  <img src={Ava} width="30" height="30"/>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                      ))
+                  )}
+                </div>
+              </div>
+            </div>
+        }
       </>
   );
 };

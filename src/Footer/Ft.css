@@ -44,13 +44,14 @@ html, body {
 #linkss {
     color: rgb(31, 31, 31);
     text-decoration: none;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-weight: 400;
 
 }
 a {
     text-decoration: none;
 }
+
 #linkss:hover {
     color: black;
 }
@@ -64,8 +65,10 @@ a {
 
 
 .info {
-    display: block;
-    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    font-family: Roboto, sans-serif;
     margin-top: -20px;
 }
 
@@ -84,6 +87,13 @@ a {
 
 .email {
     color: #666666;
-    margin-right: 10px;
     white-space: nowrap;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #aaaaaa;
+    margin-top: 30px;
 }

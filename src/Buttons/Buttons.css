@@ -1,0 +1,72 @@
+.tele_true {
+    display: flex;
+}
+
+#tele_img  {
+    margin-top: 18px;
+    width: 50px;
+    height: 50px;
+}
+
+.color {
+    position: relative;
+}
+
+.iamges-bg {
+    height: auto;
+    position: absolute;
+    top: -150px;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+}
+
+.tele_text {
+    position: relative;
+    display: grid;
+    align-items: start;
+    color: white;
+    font-family: Roboto sans-serif;
+}
+
+
+#h3 {
+    position: absolute;
+    top: 10px;
+    width: 200px;
+    height: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+
+#h1 {
+    position: absolute;
+    top: 10px;
+    height: 20px;
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 30px;
+    width: 408px;
+    margin-left: 20px;
+}
+
+
+#p1 {
+    width: 820px;
+    margin-left: 25px;
+    margin-top: 20px;
+    color: #f7f7f7;
+    line-height: 1.5em;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 1px #000000, 0 0 0.5em #000000;
+}
+
+.tele-lain {
+    color: #fff;
+}
+
+.padding-lift {
+    margin-left: 20px;
+    line-height: 25px;
+}
