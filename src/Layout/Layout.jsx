@@ -5,11 +5,10 @@ import { Outlet } from 'react-router-dom';
 import IconBfb from '../IconBfb/IconBfb';
 import Form from '../ApplicationForm/ApplicationForm'
 
-
-const Layout = () => {
+const Layout = ({ getInputValue }) => {
   return (
     <div>
-      <Nav/>
+      <Nav getInputValue={getInputValue} />
       <Outlet/>
       <IconBfb/>
       <Form />

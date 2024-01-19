@@ -1,0 +1,100 @@
+.latest-broadcast {
+   display: flex;
+   flex-direction: column;
+   width: 360px;
+   height: 280px;
+}
+
+.latest-broadcast-top {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   width: 100%;
+   height: 250px;
+   background: url('https://www.cableman.ru/sites/default/files/start_0.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border: 1px solid #cccccc;
+   position: relative;
+   overflow: hidden;
+   z-index: 3;
+}
+
+.latest-broadcast-top::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url('https://tvstart.ru//app/themes/mytheme/i/img-shade.png');
+}
+
+.latest-broadcast-top__title {
+   position: absolute;
+   z-index: 2;
+   font-size: 1em;
+   font-weight: 300;
+   left: 20px;
+   bottom: 30px;
+   cursor: pointer;
+   color: #606060;
+   font-weight: bold;
+}
+.latest-broadcast-top__title > a {
+   color: #606060;
+   left: 20px;
+}
+.latest-broadcast-top__title:hover {
+   text-decoration: underline;
+}
+
+.latest-broadcast-bottom {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   border: 1px solid #cccccc;
+   border-top: none;
+}
+
+.latest-broadcast-bottom__logo {
+   height: 30px;
+   width: 30px;
+   padding: 25px 25px;
+   border-right: 1px solid #cccccc;
+}
+.latest-broadcast-bottom__desc {
+   display: flex;
+   flex-direction: column;
+   gap: 0px;
+   justify-content: center;
+}
+.latest-broadcast-bottom__play {
+   height: 30px;
+   width: 30px;
+   padding: 25px 25px;
+   cursor: pointer;
+}
+.latest-broadcast-bottom__play_img {
+   color: #000;
+   width: 30px;
+   height: 30px;
+}
+
+.latest-broadcast-bottom__desc_date,
+.latest-broadcast-bottom__desc_tournament {
+   margin: 0;
+   text-align: center;
+}
+
+.latest-broadcast-bottom__desc_date {
+   color: #666666;
+   font-size: 12px;
+}
+.latest-broadcast-bottom__desc_tournament {
+   color: #BABABA;
+   font-size: 14px;
+   height: 20px;
+}

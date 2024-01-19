@@ -12,7 +12,7 @@ import SearchInput from '../Search/Search'
 import { Link } from 'react-router-dom'
 import televd from "./icon/video.png"
 
-const Nav = () => {
+const Nav = ({ getInputValue }) => {
 
     return (
         <div className="container">
@@ -91,7 +91,7 @@ const Nav = () => {
                     <div className='search'>
                         <div className='search_bl'>
                             {/* <input id='inp_search' type="search" /> */}
-                            <SearchInput/>
+                            <SearchInput getInputValue={getInputValue} />
                         </div>
                     </div>
                 </div>

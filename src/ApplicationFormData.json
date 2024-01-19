@@ -1,0 +1,18 @@
+{
+  "applicationData": [
+    {
+      "id": "1",
+      "activities": "",
+      "contact": "",
+      "telephone": "",
+      "gmail": ""
+    },
+    {
+      "id": "bdcb",
+      "activities": "test",
+      "contact": "devv",
+      "telephone": "111111",
+      "gmail": "test@mail.ru"
+    }
+  ]
+}

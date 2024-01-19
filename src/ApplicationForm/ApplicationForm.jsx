@@ -1,23 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import './form.css'
-import { data } from 'browserslist'
-
 
 const Form = () => {
    const { register, handleSubmit } = useForm({})
 
-   const [formData, setFormData] = useState({
-      activities: '',
-      contact: '',
-      telephone: '',
-      gmail: ''
-   })
+   // eslint-disable-next-line
+   const onSubmit = async (data) => {
+      try {
+         const response = fetch("http://localhost:3000/applicationData", {
+            method: "POST",
+            headers: {
+               'Content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+         })
 
-   
+         if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+         }
 
-   const submit = data => {
-      console.log(data)
+         const responseData = await response.json();
+         console.log('Ответ от сервера', responseData);
+         
+      } catch (e) {
+         console.error('ошибка при отправке запроса', e);
+      }
    }
 
    return (
@@ -32,7 +40,7 @@ const Form = () => {
                </p>
             </div>
             <form 
-               onSubmit={handleSubmit(submit)}
+               onSubmit={handleSubmit(onSubmit)}
                className='application-form-content__form' 
                action="#"
             >
