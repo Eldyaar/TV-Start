@@ -2,6 +2,17 @@
     padding: 20px 0;
 }
 
+.block__block-post_title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
 h2 {
     font-family: inherit, sans-serif;
     font-size: 30px;

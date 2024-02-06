@@ -25,6 +25,7 @@
   transition-delay: 0.3s;
   background: white;
   color: #3d3d3d; 
+  outline: none;
 }
 
 .search-form:hover .search-input {

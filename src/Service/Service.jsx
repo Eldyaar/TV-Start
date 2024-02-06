@@ -10,16 +10,22 @@ const Service = () => {
             {selectedLanguage === 'RU' &&
                 <div className="block__block-post">
                     <h2>Услуги</h2>
-                    <p>Наша компания имеет собственную техническую базу и готова предоставить полный спектр услуг
+                    <p>
+                        Наша компания имеет собственную техническую базу и готова предоставить полный спектр услуг
                         телевизионного производства. Мы можем предложить любые услуги вещания от аренды оборудования до
                         организации полного телевизионного производства и прямой трансляции любого мероприятия полностью
-                        укомплектованным&nbsp;творческим коллективом.</p>
-                    <p>Наш главный офис находится в Москве. Тем не менее, мы предоставляем наши услуги в любом регионе
+                        укомплектованным&nbsp;творческим коллективом.
+                    </p>
+                    <p>
+                        Наш главный офис находится в Москве. Тем не менее, мы предоставляем наши услуги в любом регионе
                         России, Беларуси и Казахстана. Используя flypack-оборудование, наша компания сможет производить
-                        любое мероприятие на разных континентах и в далеких странах.</p>
-                    <p><img src="http://tvstart.ru/app/uploads/2017/03/services01-1.jpg" alt="" width="100%"/></p>
+                        любое мероприятие на разных континентах и в далеких странах.
+                    </p>
+                    <p>
+                        <img src="http://tvstart.ru/app/uploads/2017/03/services01-1.jpg" alt="" width="100%"/>
+                    </p>
                     <p>&nbsp;</p>
-                    <h4>TVSTART предоставляет следующие технические услуги:</h4>
+                    <h4 className='block__block-post_title'>TVSTART предоставляет следующие технические услуги:</h4>
                     <div className="row">
                         <div className="col-md-6">
                             <p><strong>HD OB Tracks</strong></p>
@@ -32,10 +38,9 @@ const Service = () => {
                                 <li>internet streaming with own server.</li>
                             </ul>
                         </div>
-                        <br/><br/>
                         <div className="col-md-6">
-                            <img src="http://tvstart.ru/app/uploads/2017/03/services06.jpg" alt="" width="555px"
-                                 height="263px"/></div>
+                            <img src="http://tvstart.ru/app/uploads/2017/03/services06.jpg" alt="" width="555px" height="263px" />
+                        </div>
                     </div>
                     <br/><br/>
                     <div className="row">
@@ -227,8 +232,11 @@ const Service = () => {
                     <br/><br/>
                     <p>Our company is very flexible in pricing. We are ready to fulfill all your requirements and find
                         the optimal solution within the budget.</p>
-                    <p><img className="alignnone size-full wp-image-82"
-                            src="http://tvstart.ru/app/uploads/2017/03/services02.jpg" alt="" width="100%"/></p>
+                    <p>
+                        <img className="alignnone size-full wp-image-82"
+                                src="http://tvstart.ru/app/uploads/2017/03/services02.jpg" alt="" 
+                                width="100%"/>
+                    </p>
                 </div>
             }
         </div>

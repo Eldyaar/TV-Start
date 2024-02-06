@@ -1,115 +1,126 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom'
+import programData from './ProgramsData';
+
 import './Programm.css';
-import IconBfb from "../IconBfb/IconBfb";
-import {useLanguage} from "../LanguageContext/LanguageContext";
-import star from "../Contact/build.png";
 
-const Programm = () => {
-    const [sportTypes, setSportTypes] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('https://tv-start.onrender.com/sport_type/');
+const Program = () => {
+    const [day, setDay] = useState('')
 
-                if (!response.ok) {
-                    throw new Error(`Error: ${response.status}`);
-                }
 
-                const data = await response.json();
-                setSportTypes(data.results);
-            } catch (error) {
-                console.error('Error:', error.message);
+    const filterByDay = () => {
+        const daysOfWeek = [
+            'Понедельник', 
+            'Вторник', 
+            'Среда',
+            'Четверг', 
+            'Пятница', 
+            'Суббота', 
+            'Воскресенье',
+        ]
+
+        const curDate = new Date()
+        const yesterday = daysOfWeek[curDate.getDay() - 2]
+        const today = daysOfWeek[curDate.getDay() - 1]
+        const tomorrow = daysOfWeek[curDate.getDay()]
+        const dateObj = new Date(curDate)
+    
+        const day = dateObj.getDate().toString().padStart(2, '0')
+        const month = (dateObj.getMonth() + 1).toString().padStart(2, '0')
+        const year = dateObj.getFullYear()
+        const currentDate = `${day}-${month}-${year}`
+    
+        const helper = []
+        let helperIndex = 0
+        programData.forEach((item) => {
+            if (currentDate === item.date_of_match) {
+                helper[helperIndex] = {...item}
+                helperIndex++
             }
-        };
+        })
 
-        fetchData();
-    }, []);
+        daysOfWeek.forEach((day, index) => {
+            if (day === today) {
+                daysOfWeek[index] = 'Сегодня'
+            } else if (day === tomorrow) {
+                daysOfWeek[index] = 'Завтра'
+            } else if (day === yesterday) {
+                daysOfWeek[index] = 'Вчера'
+            }
+        })
 
-    const displaySportTypes = () => (
-        <div>
-            {sportTypes.map((sportType, index) => (
-                <div key={index}>
-                    <h3>{sportType.name_ru}</h3>
-                    <p>{sportType.created_date} MSK</p>
-                </div>
-            ))}
-        </div>
-    );
+        return {
+            helper,
+            daysOfWeek
+        }
+    }
 
-    const { selectedLanguage } = useLanguage();
+    const resData = filterByDay()
 
     return (
-        <div>
-            <div className="content">
-
-                {selectedLanguage === "RU" &&
-                    <div>
-                        <div className="col-md-7">
-                            <a href="https://tv.yandex.ru/channel/start-triumf-1476" target="_blank">
-                                <h3>Программа Телеканала «СТАРТ Триумф»</h3>
-                            </a>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-6">
-                                <h3>Программа Телеканала «СТАРТ»</h3>
-                            </div>
-                            <div className="col-md-6 table-schedule__nav">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__1">СЕГОДНЯ</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__2 table-schedule__nav__link">ЗАВТРА</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__3 table-schedule__nav__link">СР</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__4 table-schedule__nav__link">ЧТ</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__5 table-schedule__nav__link">ПТ</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__6 table-schedule__nav__link">СБ</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__7 table-schedule__nav__link">ВС</span>
+        <div className='section-program'>    
+            <div className='content'>
+                <div className='program'>
+                    <div className='program-nav'>
+                        <a href='https://tv.yandex.ru/channel/start-triumf-1476' target='_blank'>
+                            <h2 className='program-nav__link'>
+                                Программа Телеканала «СТАРТ Триумф»
+                            </h2>
+                        </a>
+                        <div className='program-nav__actions'>
+                            <h2 className='program-nav__actions-title'>
+                                Программа Телеканала «СТАРТ»
+                            </h2>
+                            <div className='program-nav__actions-navbar'>
+                                {resData.daysOfWeek.map((item) => {
+                                    return <NavLink className='program-nav__actions-navbar__link'>{item}</NavLink>
+                                })}
                             </div>
                         </div>
-                        {displaySportTypes()}
                     </div>
-                }
-
-                {selectedLanguage === "EN" &&
-                    <div>
-                        <div className="col-md-7">
-                            <a href="https://tv.yandex.ru/channel/start-triumf-1476" target="_blank">
-                                <h3>Program of TV Channel "START Triumph"</h3>
-                            </a>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-6">
-                                <h3>Program of TV Channel "START"</h3>
-                            </div>
-                            <div className="col-md-6 table-schedule__nav">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__1">TODAY</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__2 table-schedule__nav__link">TOMORROW</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__3 table-schedule__nav__link">WED</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__4 table-schedule__nav__link">THU</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__5 table-schedule__nav__link">FRI</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__6 table-schedule__nav__link">SAT</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span className="table-schedule__nav__7 table-schedule__nav__link">SUN</span>
-                            </div>
-                        </div>
-                        {displaySportTypes()}
+                    <div className='program-content'>
+                        <Content curDay={resData.helper} />
                     </div>
-                }
-
+                </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Programm;
+const Content = ({ curDay }) => {
+    return (
+        curDay.map((data) => {
+            return <ProgramContentItem data={data}/>
+        })
+    )
+}
+
+const ProgramContentItem = ({ data }) => {
+    const checkDescription = (dataObj) => {
+        if (dataObj.live) {
+            return (
+                <>
+                    <span className='live'>Прямой эфир</span>
+                    {dataObj.description}
+                </>
+            )
+        } else {
+            return dataObj.description
+        }
+    }
+
+    return (
+        <div className='program-content__item'>
+            <div className='program-content__item-time'>
+                <div className='program-content__item-time__value'>{data.time_value}</div>
+                <div className='program-content__item-time__region'>{data.time_region}</div>
+            </div>
+            <div className='program-content__item-description'>
+                {checkDescription(data)}
+            </div>
+        </div>
+    )
+}
+
+export default Program;

@@ -130,3 +130,39 @@ select {
 .fff {
     color: #fff;
 }
+
+.nav-for-home-page {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 10px 0;
+}
+.nav-for-home-page__item {
+    display: flex;
+    gap: 20px;
+}
+.nav-for-home-page__item-logo > img {
+    width: 60px;
+    height: 60px;
+}
+.nav-for-home-page__item-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    color: white;
+}
+.nav-for-home-page__item-desc__watch {
+    font-size: 16px;
+    font-weight: 500;
+}
+.nav-for-home-page__item-desc__title {
+    font-weight: 500;
+    font-size: 30px;
+}
+.nav-for-home-page__item-desc__schedule {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    color: lightgray; 
+}

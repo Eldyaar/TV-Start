@@ -58,25 +58,45 @@ td {
 }
 
 .last-three {
-    width: 220px;
-    height: 280px;
-    padding: 8px;
+    height: 297px;
     text-align: center;
-    border: 1px solid #aaa;
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.inform {
     background: #ccc;
+    border: 1px solid #aaa;
+    width: 220px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
 }
 
 .information {
+    height: 100%;
+    display: flex;
+    
 }
+.information-content {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
 
 .smart-tv-data {
     width: 825px;
+    height: 100%;
 }
 
 .smart-inform {
     display: flex;
-    margin: 130px 0 130px 8px;
+   
     flex-wrap: wrap;
+    height: 100%;
 }
 
 .wrap-content {
@@ -131,10 +151,7 @@ td {
     flex-wrap: wrap;
 }
 
-.inform {
-    display: flex;
-    margin: 0 80px;
-}
+
 
 .block {
     display: flex;

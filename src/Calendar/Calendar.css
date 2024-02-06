@@ -6,6 +6,17 @@ h3 {
     padding-bottom: 20px;
 }
 
+.broadcast-title {
+    font-size: 24px;
+    color: inherit;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.broadcast-wrap {
+    margin: 40px 0;
+}
+
 .content-flex {
     height: 700px;
     overflow-y: scroll;
@@ -24,7 +35,6 @@ h3 {
 .content-flex::-webkit-scrollbar-track {
     background-color: #eee;
 }
-
 
 .body {
     display: flex;

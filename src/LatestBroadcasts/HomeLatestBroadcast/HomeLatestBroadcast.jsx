@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 
 import './homeLatestBroadcast.css'
 import LatestBroadcast from '../LatestBroadcastCard/LatestBroadcastCard'
+import Broadcast from '../../Broadcast/Broadcast'
+import Program from '../../Programm/Programm'
 
 const HomeLatestBroadcast = () => {
    const [latestData, setLatestData] = useState([])
@@ -31,25 +33,30 @@ const HomeLatestBroadcast = () => {
    }  
 
    return (
-      <div className='content'>
-         <div className='latest-broadcast-section'>
-            <h2 className='latest-broadcast-title'>Последние трансляции</h2>
-            <div className='latest-broadcast-wrapper'>
-               {filterMatches().map((matchData) => {
-                  return <LatestBroadcast results={matchData} /> 
-               })}
+      <>
+         <Broadcast />
+         <div className='content'>
+            <div className='latest-broadcast-section'>
+               <h2 className='latest-broadcast-title'>Последние трансляции</h2>
+               <div className='latest-broadcast-wrapper'>
+                  {filterMatches().map((matchData) => {
+                     return <LatestBroadcast results={matchData} /> 
+                  })}
+               </div>
+               <button 
+                  className='latest-broadcast-show-more' 
+                  onClick={(e) => {
+                     e.preventDefault()
+                     handleClickShowMore();
+                  }}
+               >
+                  Смотреть больше
+               </button>   
             </div>
-            <button 
-               className='latest-broadcast-show-more' 
-               onClick={(e) => {
-                  e.preventDefault()
-                  handleClickShowMore();
-               }}
-            >
-               Смотреть больше
-            </button>   
          </div>
-      </div>
+         <hr />
+         <Program />
+      </>
    )
 }
 

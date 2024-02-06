@@ -59,29 +59,26 @@ const Broadcasting = () => {
                                 </div>
                             </div>
 
-                            <div className="wrapper last-three">
+                            <div className="last-three">
                                 <div className="inform">
                                     <p className="tv">СМАРТ ТВ</p>
                                 </div>
                                 <div className="information">
-                                    <div className="smart-tv-data">
-                                        <div className="smart-inform">
-                                            {smartTVData.map((item, index) => (
-                                                <div className="wrap-content" key={index}>
-                                                    <div className="inner">
-                                                        <div className="wrap-colum">
-                                                            <img src={item.image} alt={item.name_ru}
-                                                                 className="images"/>
-                                                        </div>
-                                                        <div className="wrap-colum">
-                                                            <a href={item.url} target="_blank" className="link">
-                                                                {item.name_ru}
-                                                            </a>
-                                                        </div>
+                                    <div className='information-content'>
+                                        {smartTVData.map((item, index) => (
+                                            <div className="wrap-content" key={index}>
+                                                <div className="inner">
+                                                    <div className="wrap-colum">
+                                                        <img src={item.image} alt={item.name_ru} className="images"/>
+                                                    </div>
+                                                    <div className="wrap-colum">
+                                                        <a href={item.url} target="_blank" className="link">
+                                                            {item.name_ru}
+                                                        </a>
                                                     </div>
                                                 </div>
-                                            ))}
-                                        </div>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>

@@ -50,8 +50,17 @@ const SearchInput = ({ getInputValue }) => {
     getInputValue(filterData())
   }
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      handleClickShowMore()
+      getInputValue(filterData())
+    }
+  }
+ 
+
   return (
-    <form onSubmit={handleSubmit} className="search-container">
+    <form onSubmit={handleSubmit} onKeyDown={handleKeyDown} className="search-container">
       <div className='search-form'>
         <input
           type="text"
